@@ -3,10 +3,9 @@ using System.Text.Encodings.Web;
 
 namespace HelpRon.Controllers
 {
-    public class HelloController : Controller
+    public class HelloWorldController : Controller
     {
-        // 
-        // GET: /Hello/
+      
 
         public IActionResult Welcome(string name, int numTimes = 1)
         {

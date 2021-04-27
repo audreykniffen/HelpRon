@@ -1,6 +1,6 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using HelpRon.Data;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
-using HelpRon.Data;
 using System;
 using System.Linq;
 
@@ -14,7 +14,7 @@ namespace HelpRon.Models
                 serviceProvider.GetRequiredService<
                     DbContextOptions<HelpRonContext>>()))
             {
-                // Look for any movies.
+                // Look for any needs.
                 if (context.Need.Any())
                 {
                     return;   // DB has been seeded

@@ -154,22 +154,3 @@ namespace Needs.Controllers
         }
     }
 }
-
-#if snippet_1stSearch
-        // First Search
-#region snippet_1stSearch
-        public async Task<IActionResult> Index(string searchString)
-        {
-            var need = from m in _context.need
-                         select m;
-
-            if (!String.IsNullOrEmpty(searchString))
-            {
-                need = needs.Where(s => s.Title.Contains(searchString));
-            }
-
-            return View(await needs.ToListAsync());
-        }
-#endregion
-        // End first Search
-#endif
